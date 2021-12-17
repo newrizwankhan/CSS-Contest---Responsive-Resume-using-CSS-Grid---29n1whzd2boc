@@ -17,7 +17,7 @@
     </head>
     <body>
         <style>
-            *{
+          *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -25,9 +25,83 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Write CSS code below */
+.main-content{
+    min-height: 1000px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 300px 700px;
+}
+.left-section{
+    grid-column: span 1;
+    background-color: #003147;
+    padding: 1rem;
+    color: white;
+}
+.right-section{
+    grid-column: span 1 / span 2;
+    background-color: lightskyblue;
+}
+.profile-image{
+    display: block;
+    align-items: center;
+    margin: auto;
+    border: 5px solid white;
+    border-radius: 30%;
+    width: 60%;
+}
+.name{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.02px;
+    padding: 0.8rem;
+}
+.designation{
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+}
+.description{
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 1rem 1rem;
+}
+.icon{
+    padding: 15px;
+}
+.skills{
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+}
+.skill-name{
+    font-size: 0.65rem;
+    font-weight: 0.65rem;
+    text-align: left;
+    padding-bottom: 0.5rem;
+}
+.progress-bar{
+    border: 1px solid white;
+    height: 4px;
+}
+.right-main-content{
+    padding: 2rem 3rem 2rem 3rem;
+}
+.right-title{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.5rem;
+    letter-spacing: 1px;
+}
 @media screen  and (max-width:630px){
     .main-content{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
  
 }
@@ -35,115 +109,11 @@
 
 @media screen  and (max-width:673px){
     .main-content{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
    
  
  }
-body{
-    background-color: #a6abad;
-}
-.main-content{
-    min-height: 1000px;
-    width: 90%;
-    margin: 20px auto;
-    display: grid;
-    grid-template-rows: 20% 80%;
-    grid-template-columns: 300px 700px;
-}
-section{
-    display: block;
-}
-.left-section{
-    /*display: grid;*/
-    grid-area: 1/1/3/2;
-    grid-column: span 1;
-    background-color: #242531;
-}
-.right-section{
-   /* display: grid;*/
-    grid-area: 1/2/3/3;
-    grid-column: span 1/span 2;
-    background-color: #f7f7f7;
-}
-.profile-image{
-    display: block;
-    margin: auto;
-    border: 5px white solid;
-    border-radius: 30%;
-    width: 60%;
-    align-items: center;
-    padding: 1rem;
-}
-left-content{
-    padding: 1rem;
-}
-.name{
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.02px;
-    color: white;
-    padding: 0.8rem;
-}
-.designation{
-    font-size: 1rem;
-    text-transform: uppercase;
-    text-align: center;
-    padding-bottom: 0.5rem;
-    color: white;
-}
-.description{
-    font-size:0.75rem;
-    text-align: center;
-    padding: 1rem 1rem;
- }
-}
-.social-meida{
-    display: flex;
-    flex-direction: row;
-    padding: 15px;
-    justify-content: space-around;
-}
-.icon{
-    display: inline-block;
-    width: 30px;
-    font-size: 18px;
-    padding: 1px;
-}
-h1{
-    text-align: center;
-    color:white;
-}
-.skills{
-    font-size: 0.75rem;
-    text-align: center;
-    padding:1rem 0.5rem 1rem 0.5rem;
-    color: white;
-}
-.skill-name{
-    font-size: 0.65rem;
-    text-align: left;
-    padding-bottom: 0.5rem;
-}
-.progress-bar{
-    border: 1px white solid;
-    height: 4px;
-}
-.right-main-section{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
-.right-title{
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 00.5rem;
-    letter-spacing: 1px;
-}
     </style>
     <main class="main-content" contenteditable="true">
             <section class="left-section">
