@@ -26,11 +26,17 @@
 }
 @media screen  and (max-width:674px){
     .main-content{
-        grid-column: 300px 700px;
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+       /* grid-column: 300px 700px;*/
     }
     .right-section{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
+    }
+
+    
+}
 }
 body{
     background-color: #a6abad;
@@ -90,7 +96,6 @@ left-content{
     font-size: 0.75rem;
     text-align: center;
     padding-top: 1rem;
-    padding-bottom: 1rem;
     color: white;
 }
 .social-meida{
@@ -158,7 +163,7 @@ h1{
                                 <li class="icon"><a href="https://mail.google.com/mail/u/0/?ogbl#inbox"><img class="icon" src="https://www.howtogeek.com/wp-content/uploads/2021/06/gmail_hero_1200_675.png?width=1198&trim=1,1&bg-color=000&pad=1,1"></a></li>
                             </div>
                             <div class="skills">
-                                <h2 class="skill-title">Skills</h2>
+                                <h2 class="skills">Skills</h2>
                                 <div class="skill-items">
                                     <div class="skill-name"><h3>HTML</h3></div>
                                     <div class="skill-progress"> 
