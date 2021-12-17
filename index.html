@@ -16,6 +16,91 @@
 
     </head>
     <body>
+        <style>
+            *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: #a6abad;
+}
+.main-content{
+    min-height: 1000px;
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 300px 700px;
+}
+section{
+    display: block;
+}
+.left-section{
+    /*display: grid;*/
+    grid-area: 1/1/3/2;
+    grid-column: span 1;
+    background-color: #242531;
+}
+.right-section{
+   /* display: grid;*/
+    grid-area: 1/2/3/3;
+    grid-column: span 1/span 2;
+    background-color: #f7f7f7;
+}
+.profile-image{
+    display: block;
+    margin: auto;
+    border: 5px white solid;
+    border-radius: 30%;
+    width: 60%;
+    align-items: center;
+    padding: 1rem;
+}
+left-content{
+    padding: 1rem;
+}
+.name{
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: white;
+    padding: 0.8rem;
+}
+.designation{
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    color: white;
+}
+.description{
+    font-size: 0.75rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+}
+.social-meida{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    justify-content: space-around;
+}
+.icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    padding: 1px;
+}
+h1{
+    text-align: center;
+    color:white;
+        </style>
         <main class="main-content" contenteditable="true">
             <section class="left-section">
                  <div class="left-content">
