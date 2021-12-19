@@ -17,7 +17,7 @@
     </head>
     <body>
         <style>
-          *{
+        *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -26,40 +26,44 @@
 }
 
 /* Write CSS code below */
-.main-content{
-    min-height: 1000px;
-    width: 90%;
-    margin:20px auto;
+body{
+    background-color: #add8e6;
+}
+
+.main-content {
     display: grid;
     grid-template-columns: 300px 700px;
-    grid-template-rows: 20% 80%;
-}
+    min-height: 1000px;
+    width: 90%;
+    margin: 20px auto;
+  }
 .left-section{
     grid-column: span 1;
     background-color: #003147;
-    padding: 1rem;
-    color: white;
+    color: #fff;
 }
 .right-section{
     grid-column: span 1 / span 2;
-    background-color: lightskyblue;
+    background-color: #fff;
+}
+
+.left-content{
+    padding: 1rem;
 }
 .profile-image{
     display: block;
-    align-items: center;
     margin: auto;
-    border: 5px solid white;
+    border: 5px white solid;
     border-radius: 30%;
     width: 60%;
 }
 .name{
     font-size: 1.2rem;
     font-weight: 700;
-    color: #fff;
+    padding: 0.8rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.02px;
-    padding: 0.8rem;
 }
 .designation{
     font-size: 1rem;
@@ -72,14 +76,37 @@
     text-align: center;
     padding: 1rem 1rem;
 }
-.icon{
-    padding: 15px;
+.social-media{
+    display: flex;
+    justify-content: space-evenly;
+}
+.contactInfo{
+    padding: 5%;
+}
+.contactInfo ul{
+    position: relative;
+}
+.contactInfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contactInfo ul li span{
+    color: #fff;
+    font-weight: 300;
 }
 .skills{
     font-size: 0.75rem;
     text-align: center;
     text-transform: uppercase;
-    padding: 1rem 0.5rem 1rem 0.5rem;
+    padding: 1rem 0.5rem;
 }
 .skill-name{
     font-size: 0.65rem;
@@ -87,12 +114,22 @@
     text-align: left;
     padding-bottom: 0.5rem;
 }
-.progress-bar{
-    border: 1px solid white;
+.progress-bar {
+    border: 1px white solid;
+    height: 4px;
+  }
+  
+.progress-bar>div {
+    border: 1px white solid;
+    background-color: #fff;
     height: 4px;
 }
+.skill-item{
+    padding: 5px;
+}
+
 .right-main-content{
-    padding: 2rem 3rem 2rem 3rem;
+    padding: 2rem 3rem;
 }
 .right-title{
     text-transform: uppercase;
@@ -101,9 +138,31 @@
     padding: 0.5rem;
     letter-spacing: 1px;
 }
+.para{
+    padding: 0.5rem;
+}
+.box{
+    display: flex;
+}
+.box>.text{
+    padding: 0.5rem;
+}
+.box>.text{
+    padding: 0.5rem;
+}
+h6{
+    margin-top: 10px;
+}
+.box .year{
+    min-width: 150px;
+}
+.projects{
+    padding: 0.5rem;
+}
+
 @media (max-width: 673px){
     .main-content {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
         width: 90%;
         min-height: 1000px;
     }
@@ -127,30 +186,154 @@
                             </div>
                             <div class="skills">
                                 <h2 class="skills-title">Skills</h2>
-                                <div class="skill-items">
-                                    <div class="skill-name"><h3>HTML</h3></div>
-                                    <div class="skill-progress"> 
-                                        <div class="progress-bar" style="width: 90%;"></div></div>
+                                <div class="skill-content">
+                                    <div class="skill-item">
+                                        <div class="skill-name">
+                                            <h4>HTML</h4>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div style="width: 90%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">
+                                            <h4>CSS</h4>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div style="width: 90%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">
+                                            <h4>JavaScript</h4>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div style="width: 30%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">
+                                            <h4>React</h4>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div style="width: 05%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">
+                                            <h4>NodeJS</h4>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div style="width: 08%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">
+                                            <h4>MongoDB</h4>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div style="width: 10%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">
+                                            <h4>MySQL</h4>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div style="width: 90%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">
+                                            <h4>PHP/h4>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div style="width: 60%;"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="profile-details"></div>
-                     </div>
-                </div>
-            </div>
-            </section>
-
-            <section class="right-section"> 
-                <div class="right-main-content">
-                    
-                    <!-- Write code for the right section here -->
-                        <P>Add an element of class 'right-main-section' in the right section having class 'right-section' in the resume</P>
-                    <div class="right-title">
-                         <h4>About me</h4>
-                         <h4>Eduction</h4>
-                         <h4>Exprience</h4>
                     </div>
-                </div>
+                    
+                
+                </section>
+    
+                <section class="right-section"> 
+                    <div class="right-main-content">
+                        
+                        <!-- Write code for the right section here -->
+                        <section class="about sect">
+                            <h4 class="right-title">About Me</h4>
+                            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea facere velit repudiandae iste exercitationem, voluptatum molestias optio nesciunt natus ipsum animi. Reprehenderit nulla atque laborum recusandae culpa, assumenda temporibus! Impedit veritatis minus ducimus obcaecati eaque culpa quas debitis esse repudiandae.
+                            </p>
+                        </section>
+                        <section class="education sect">
+                            <h4 class="right-title">Education</h4>
+                            <div class="box">
+                                <div class="text">
+                                    <h4>Degree Latest</h4>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Sit nesciunt atque praesentium, nostrum fugit dolorem.</p>
+                                </div>
+                                <div class="year">
+                                    <h5>Univ/college Name</h5>
+                                    <h6>yyyy - yyyy</h6>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="text">
+                                    <h4>Degree Last</h4>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Sit nesciunt atque praesentium, nostrum fugit dolorem.</p>
+                                </div>
+                                <div class="year">
+                                    <h5>Univ/college Name</h5>
+                                    <h6>yyyy - yyyy</h6>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="experience sect">
+                            <h4 class="right-title">Experience</h4>
+                            <div class="box">
+                                <div class="text">
+                                    <h4>Experience Latest</h4>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Sit nesciunt atque praesentium, nostrum fugit dolorem.</p>
+                                </div>
+                                <div class="year">
+                                    <h5>Organization Name</h5>
+                                    <h6>yyyy - yyyy</h6>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="text">
+                                    <h4>Experience Last</h4>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Sit nesciunt atque praesentium, nostrum fugit dolorem.</p>
+                                </div>
+                                <div class="year">
+                                    <h5>Organization Name</h5>
+                                    <h6>yyyy - yyyy</h6>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="project sect">
+                            <h4 class="right-title">Project</h4>
+                            <div class="projects">
+                                <h4>Project 1</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                   Sit nesciunt atque praesentium, nostrum fugit dolorem.</p>
+                            </div>
+                            <div class="projects">
+                                <h4>Project 2</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                   Sit nesciunt atque praesentium, nostrum fugit dolorem.</p>
+                            </div>
+                            <div class="projects">
+                                <h4>Project 3</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                   Sit nesciunt atque praesentium, nostrum fugit dolorem.</p>
             </section>
         </main>
     </body>
